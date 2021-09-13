@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import IndexBanner from '../components/IndexBanner/IndexBanner.tsx';
 ---
 
 <BaseLayout title="waifus anonymous | home">
-  <main>
-    <h1>Hello World</h1>
-    <p>some text</p>
-    <a href="/test">a link</a>
+  <main class="container">
+    <IndexBanner client:load />
   </main>
 </BaseLayout>

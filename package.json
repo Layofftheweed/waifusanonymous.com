@@ -13,6 +13,7 @@
     "astro": "^0.20.5"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "typeit-react": "^2.0.3"
   }
 }
