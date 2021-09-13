@@ -1,0 +1,35 @@
+---
+import Nav from '../components/Nav.astro';
+
+const { title } = Astro.props;
+---
+
+<style lang="scss">
+  #content {
+    background-color: var(--color-white);
+    padding-top: 100px;
+    min-height: 100vh;
+    min-height: calc(100vh - 100px);
+    width: 100vh;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title || 'waifus anonymous'}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/global.css">
+  </head>
+
+  <body>
+    <div id="content">
+      <Nav />
+      <slot />
+    </div>
+  </body>
+</html>

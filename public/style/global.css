@@ -4,25 +4,36 @@
 }
 
 :root {
+  --font-inter: 'Inter', sans-serif;
+  --font-2P: 'Press Start 2P', cursive;
+  --color-white: #ffffff;
+  --color-black: #010101;
+  --color-pink: #f0a8ea;
+  --width-container: 64rem;
+  
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 1rem;
-  --user-font-scale: 1rem - 16px;
-  font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+  font-size: calc(1rem + 0.1vw);
+}
+
+a {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
 }
 
 body {
-  padding: 4rem 2rem;
-  width: 100%;
-  min-height: 100vh;
-  display: grid;
-  justify-content: center;
-  background: #f9fafb;
-  color: #111827;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #111827;
-    color: #fff;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-2P);
+  margin: 0;
+  padding: 0;
 }

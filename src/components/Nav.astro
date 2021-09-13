@@ -1,0 +1,74 @@
+<style lang="scss">
+  .header {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--color-pink);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+      margin: auto;
+      max-width: var(--width-container);
+      padding: 0.5rem;
+    }
+  }
+
+  .header-logo {
+    display: block;
+    height: 50px;
+    width: auto;
+  }
+
+  .desktop-nav {
+    display: none;
+    z-index: 10;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: var(--black);
+          font-family: var(--font-2P);
+          font-size: 0.666rem;
+          font-size: calc(0.666rem + 0.1vw);
+        }
+      }
+
+      li:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+  }
+</style>
+
+<div class="header">
+  <div class="header--content">
+    <img src="/assets/waifusanonymous.png" alt="waifus anonymous" class="header-logo" />
+
+    <nav class="desktop-nav">
+      <ul>
+        <li>
+          <a href="/articles">articles</a>
+        </li>
+        <li>
+          <a href="/members">members</a>
+        </li>
+        <li>
+          <a href="#contact">contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
