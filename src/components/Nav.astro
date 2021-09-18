@@ -1,3 +1,7 @@
+---
+import MobileNav from './MobileNav.tsx';
+---
+
 <style lang="scss">
   .header {
     background-color: #ffffff;
@@ -28,10 +32,6 @@
     display: none;
     z-index: 10;
 
-    @media (min-width: 1024px) {
-      display: block;
-    }
-
     ul {
       list-style: none;
 
@@ -50,12 +50,18 @@
         margin-right: 1rem;
       }
     }
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 </style>
 
 <div class="header">
   <div class="header--content">
     <img src="/assets/waifusanonymous.png" alt="waifus anonymous" class="header-logo" />
+
+    <MobileNav client:load />
 
     <nav class="desktop-nav">
       <ul>

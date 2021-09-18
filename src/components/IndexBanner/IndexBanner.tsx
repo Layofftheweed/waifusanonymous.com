@@ -10,14 +10,13 @@ export default function IndexBanner() {
       <div className={styles['index-banner--copy']}>
         <TypeIt
           options={{
-            speed: 200,
-            loop: false,
+            speed: 300,
+            loop: true,
             cursor: false,
           }}
         >
           <h1>Waifus Anonymous</h1>
         </TypeIt>
-        <p>a (not so) secret society</p>
       </div>
     </header>
   );

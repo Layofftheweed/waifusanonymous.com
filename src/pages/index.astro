@@ -3,8 +3,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import IndexBanner from '../components/IndexBanner/IndexBanner.tsx';
 ---
 
+<style lang="scss">
+  section {
+    line-height: 1.666rem;
+    padding: 1rem;
+    margin: auto;
+    max-width: 36rem;
+
+    p {
+      margin-top: 0.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 48rem;
+    }
+  }
+</style>
+
 <BaseLayout title="waifus anonymous | home">
   <main class="container">
     <IndexBanner client:load />
+
+    <article>
+      <section>
+        <h3>what is waifus anonymous ?</h3>
+
+        <p>
+          waifus anonymous is collective of your average cryptocurrency enjoyers who (mostly) happen to also be 
+          <a href="https://www.merriam-webster.com/dictionary/otaku" rel="noopener noreferrer" target="_blank">otaku</a>,
+          often choosing cute anime girls ("waifus") as avatars or who often reference anime/manga in their online presence AND
+          may or may not also be (pseudo-) anonymous as well
+        </p>
+      </section>
+
+      <section>
+        <h3>who is waifus anonymous ?</h3>
+
+        <p>
+          for the most part the members of waifus anonymous are cryptocurrency traders or investors, some also are developers in the space
+          who are building cool shit all the time, or some are working at the companies in the space
+        </p>
+      </section>
+
+      <section>
+        <h3>are you a real company/VC/etc ?</h3>
+
+        <p>
+          We cannot stress enough that waifus anonymous is a collection of friends and not a legal entity of any sort
+        </p>
+
+        <br />
+        <br />
+
+        <em>ask us again in the future though..</em>
+      </section>
+    </article>
   </main>
 </BaseLayout>
