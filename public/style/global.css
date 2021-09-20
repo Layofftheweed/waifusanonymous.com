@@ -33,6 +33,10 @@ body {
   font-family: var(--font-inter);
 }
 
+img {
+  display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-2P);
   margin: 0;
@@ -42,5 +46,6 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   margin: 0 auto;
   max-width: var(--width-container);
+  padding: 0;
   width: 100%;
 }

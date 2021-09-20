@@ -23,7 +23,7 @@ export default function MobileNav() {
               <a href="/articles">articles</a>
             </li>
             <li>
-              <a href="#contact">contact</a>
+              <a href="/contact">contact</a>
             </li>
           </ul>
         </nav>

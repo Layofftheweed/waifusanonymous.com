@@ -10,6 +10,7 @@ import MobileNav from './MobileNav.tsx';
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 
     &--content {
       display: flex;
@@ -59,7 +60,9 @@ import MobileNav from './MobileNav.tsx';
 
 <div class="header">
   <div class="header--content">
-    <img src="/assets/waifusanonymous.png" alt="waifus anonymous" class="header-logo" />
+    <a href="/">
+      <img src="/assets/waifusanonymous.png" alt="waifus anonymous" class="header-logo" />
+    </a>
 
     <MobileNav client:load />
 
@@ -69,7 +72,7 @@ import MobileNav from './MobileNav.tsx';
           <a href="/articles">articles</a>
         </li>
         <li>
-          <a href="#contact">contact</a>
+          <a href="/contact">contact</a>
         </li>
       </ul>
     </nav>
