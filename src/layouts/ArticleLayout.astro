@@ -1,0 +1,88 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const { content } = Astro.props;
+const { title, author, authorLink, date } = content;
+---
+
+<style lang="scss">
+  #content {
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding-top: 100px;
+    min-height: 100vh;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+  }
+
+  .article {
+    line-height: 1.5rem;
+    margin: 1rem auto;
+    max-width: 42rem;
+    min-height: 100vh;
+    padding: 1rem;
+    width: 100%;
+
+    &--footer {
+      border-top: 3px solid var(--color-black);
+      margin-top: 2rem;
+
+      * {
+        margin-top: 1rem;
+      }
+    }
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>waifus anonymous | {title} by {author}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/global.css">
+  </head>
+
+  <body>
+    <div id="content">
+      <Nav />
+        <article class="article">
+          <slot />
+
+          <section class="article--footer">
+            <div>
+              Authored by:&nbsp;
+              <a href={authorLink} rel="noopener noreferrer" target="_blank">{author}</a>
+            </div>
+            <div>{date}</div>
+          </section>
+        </article>
+      <Footer />
+    </div>
+
+    <script>
+      document.querySelectorAll('.article p').forEach((el) => el.style.marginTop = '0.5rem');
+      document.querySelectorAll('.article ul').forEach((el) => el.style.marginTop = '0.5rem');
+      document.querySelectorAll('.article li').forEach((el) => el.style.marginTop = '0.5rem');
+      document.querySelectorAll('.article strong').forEach((el) => el.style.marginTop = '0.5rem');
+      document.querySelector('.article h1').style.margin = '0.5rem 0';
+      document
+        .querySelectorAll('.article a')
+        .forEach((el) => {
+          el.rel = 'noopener noreferrer';
+          el.target = '_blank';
+        })
+    </script>
+  </body>
+</html>
