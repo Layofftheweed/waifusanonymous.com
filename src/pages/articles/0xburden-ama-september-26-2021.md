@@ -1,4 +1,5 @@
 ---
+id: 0
 layout: ../../layouts/ArticleLayout.astro
 title: '0xburden: AMA'
 author: 0xburden
