@@ -32,6 +32,11 @@ const { title, author, authorLink, date } = content;
         margin-top: 1rem;
       }
     }
+
+    &--back-link {
+      display: block;
+      margin: 2rem 0;
+    }
   }
 </style>
 
@@ -58,7 +63,11 @@ const { title, author, authorLink, date } = content;
     <div id="content">
       <Nav />
         <article class="article">
+          <a href="/articles" class="article--back-link">&larr;back to articles</a>
+
           <slot />
+
+          <a href="/articles" class="article--back-link">&larr;back to articles</a>
 
           <section class="article--footer">
             <div>
@@ -79,11 +88,11 @@ const { title, author, authorLink, date } = content;
       document.querySelector('.article h1').style.margin = '0.5rem 0';
       document.querySelector('.article h1').style.lineHeight = '1.75';
       document
-        .querySelectorAll('.article a')
+        .querySelectorAll('.article a:not(.article--back-link)')
         .forEach((el) => {
           el.rel = 'noopener noreferrer';
           el.target = '_blank';
-        })
+        });
     </script>
   </body>
 </html>
