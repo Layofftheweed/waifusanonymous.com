@@ -6,7 +6,7 @@ author: dcbuilder
 authorLink:  https://twitter.com/DCbuild3r
 date: November 15, 2021
 description: A very thorough guide for exploring and understanding the L2 ecosystem on Ethereum
-tags: Ethereum, L2s, scaling
+tags: Ethereum, L2s, scaling, dc
 ---
 
 Original Mirror Post: [Link](https://mirror.xyz/dcbuilder.eth/QX_ELJBQBm1Iq45ktPsz8pWLZN1C52DmEtH09boZuo0)
