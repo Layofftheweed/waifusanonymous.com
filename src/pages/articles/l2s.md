@@ -17,6 +17,7 @@ I'm [DCBuilder](https://twitter.com/DCbuild3r), a blockchain researcher at [Mora
 
 If you want to know more about me, let us know if you would want an AMA similar to the one [Rasukix](https://waifusanonymous.com/articles/rasukix-ama/) and [0xburden](https://waifusanonymous.com/articles/0xburden-ama-september-26-2021/) had.
 
+
 # Introduction
 
 In this article, I’ll talk about L2s on Ethereum, the state of the current scaling ecosystem, and why I believe running L2s on top of Ethereum is the most economically and technically sustainable scaling solution long term.
@@ -40,11 +41,13 @@ To summarize this massive guide I will keep a running list of important points a
 - L2s use ETH for gas but are incentivized to create DAO governance tokens to decentralize operations over time
 - The application design space is growing now that builders have more bandwidth and less execution layer hurdles to work with
 
+
 ## What is an L2?
 
 An L2 (layer-two) is a type of scaling solution that has a separate execution layer (where code runs, i.e. EVM) that inherits the security guarantees and decentralization of the network it’s running on top of i.e., the L1, Ethereum in our case. This means that if the L2 were to go dark due to a bug, infrastructure exploits, or outage, the funds are safely secured by the L1 within a smart contract bridge.
 
 The funds can be retrieved according to the latest state snapshot submitted onto the mainnet. The bridge of a true L2 is fully permissionless and decentralized so there's always a guarantee the funds are accessible once deposited by users. Several scaling approaches use distinct cryptographic proof mechanisms with different security and scalability tradeoffs which we will discuss further in this article.
+
 
 ## What are the main types of L2s?
 
@@ -61,6 +64,7 @@ The two main types of proofs are:
 - **on-chain:** the state data - along with all of the execution calldata of all transactions (smart contract function calls, native token transfers, signatures) are put together into the cryptographic proof of a bundle/roll-up of transactions which makes all of the data accessible and verifiable on-chain.
 - **off-chain:** the execution calldata and the state is handled and held off-chain by the L2. This makes it a less secure and decentralized option. However, it is much easier to bundle more transactions into the rollup, thus scaling much faster than on-chain calldata proofs.
 
+
 |  | Validity Proofs   | Fraud Proofs      |
 | -------------- | ----------------- | ----------------- |
 | **DA on-chain**  | ZK Rollup         | Optimistic Rollup |
@@ -72,7 +76,7 @@ These are the main relevant properties that help distinguish different types of 
 
 In blockchain, there is a famous trilemma- that tries to optimize for 3 main factors: security, decentralization, and scalability. All three are very hard to achieve within the same system. Often two out of three are attained with a compromise on the third. In the case of Ethereum, we optimize for security and decentralization first, while working on scalability as a lower priority item. To be clear, scalability is not the main priority of core Ethereum developers.
 
-![Blockchain trilemma](./images/trilemma.png)
+![Blockchain trilemma](/assets/articles/trilemma.png)
 
 Throughout 2021 we have seen Ethereum mainnet become increasingly congested through the growth of both the DeFi and NFTs. This has given the network an unprecedented demand for its blockspace. We can't simply change the number of transactions we can fit in a block by changing its gas limit because it would make nodes harder to operate as the hardware requirements would soar (decreasing decentralization) and if the blocks become too big it would destabilize consensus (decreasing security).
 
@@ -84,7 +88,7 @@ Solana has taken a distinctive path for scaling, which is of a monolithic blockc
 
 ### Modular blockchains
 
-The modular approach essentially consists of a primary network that prioritizes security and decentralization so that it can act as a data availability layer for L2s. If the primary network were to go down, all L2s would go down. However, if an L2 were to go down, all of the funds are safe and secured by the L1. This is the approach that Ethereum is taking as L2s will be the layer that will provide the most scalability. There are also efforts to scale the L1 through [data sharding](<https://vitalik.ca/general/2021/04/07/sharding.html>, [state expiry and verkle trees](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal) along with various other improvements. However, these changes take considerably more time to implement as security and decentralization take precedence.
+The modular approach essentially consists of a primary network that prioritizes security and decentralization so that it can act as a data availability layer for L2s. If the primary network were to go down, all L2s would go down. However, if an L2 were to go down, all of the funds are safe and secured by the L1. This is the approach that Ethereum is taking as L2s will be the layer that will provide the most scalability. There are also efforts to scale the L1 through [data sharding](https://vitalik.ca/general/2021/04/07/sharding.html), [state expiry and verkle trees](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal) along with various other improvements. However, these changes take considerably more time to implement as security and decentralization take precedence.
 
 A key aspect of modular blockchains is that they can scale indefinitely without having to upgrade hardware at a fast pace. They can do this because they are technically and economically sustainable in contrast to monolithic architecture. The more elaborate argumentation for why a modular architecture is much more sustainable than a monolithic one can be found in [this article](https://www.reddit.com/r/ethereum/comments/pkqqjc/why_rollups_data_shards_are_the_only_sustainable/) by [@epolynya](https://twitter.com/epolynya) - Twitter ([u/Liberosist](https://www.reddit.com/user/Liberosist/posts/) - Reddit).
 
@@ -187,7 +191,7 @@ Optimistic Ethereum has ambitious plans for the future, the roadmap is available
 
 Taken from their [spec](https://github.com/ethereum-optimism/optimistic-specs/blob/main/roadmap.md):
 
-![roadmap](./images//oe-roadmap.png)
+![roadmap](/assets/articles/oe-roadmap.png)
 
 The roadmap & abstractions are designed to enable independent development of each component. The 4 major components are:
 
@@ -222,9 +226,9 @@ One of the currently most sought-after goals in the ZK space is to create a zk-l
 
 Most currently available solutions in production only act as payment layer with limited functionality (Polygon Hermez, Aztec, ...) or have added functionality with their custom execution engine (VM) that's non-EVM compatible (StarkEx + Cairo, Loopring, zkSync 1.x + Zinc, etc).
 
-##### **List of ZK-rollup L2 solutions**
+## **List of ZK-rollup L2 solutions**
 
-- #### **zkSync**
+- ### **zkSync**
 
 [ZkSync](https://zksync.io) is a zero-knowledge rollup L2 network built by [Matter Labs](https://matter-labs.io). The currently available iteration of zkSync is not EVM-compatible and supports payment functionality, limited smart contracts in a low-level language called Zinc, NFT minting, and a few other functions. However, there is already a fully EVM-compatible version of zkSync live on the Rinkeby testnet and is expected to launch on mainnet in the coming months.
 
@@ -242,7 +246,7 @@ Many teams have simultaneously been pursuing the zkEVM as a piece of technology.
 
 If you want to try out zkSync 2.0, there is a Uniswap v2 clone called [UniSync](https://uni.zksync.io/#/) which you can try out on the Rinkeby Ethereum testnet. To learn more about the zkEVM, I suggest reading [their community FAQ](https://zksync.io/zkevm/).
 
-- #### **Starkware**
+- ### **Starkware**
 
 [StarkWare](https://starkware.co/) is a company that develops STARK-based solutions for the blockchain industry. Their products enable secure, trustless, and scalable solutions for blockchain applications.
 
@@ -252,7 +256,7 @@ One of the best learning hubs for STARKs is [Starkware's STARK page](https://sta
 
 To keep up to date with Starkware, follow [their Medium blog](https://medium.com/starkware) and [content page](https://starkware.co/content/).
 
-- #### **StarkEx**
+- ### **StarkEx**
 
 [StarkEx](https://starkware.co/starkex/) is an L2 scalability engine developed by Starkware that enables to execute Cairo operations in a ZK-environment. It's currently supported features are:
 
@@ -281,7 +285,7 @@ For more information on how StarkEx works, visit the [StarkEx page](https://star
 dYdX is an on-chain derivatives platform that runs on top of a zk-rollup built by Starkware. The platform is completely rewritten in Cairo and lives on its own isolated L2 where users can easily bridge funds from Ethereum mainnet and start trading with low transaction fees. The entire orderbook is on the L2, and so users have a much better UX than on the L1 without compromising security nor decentralization as the rollup itself is permissionless and self-custodial with a trustless prover and verifier.
 
 dYdX is a custom implementation of Starkware's StarkEx and is currently the zk-rollup L2 that secures the most TVL with an approximate $1B in value locked according to [L2beat](https://l2beat.com).
-  
+
 - #### **StarkNet**
   
   [StarkNet](https://starkware.co/starknet/) is a permissionless decentralized ZK-Rollup on Ethereum. It supports Turing complete computations and will feature EVM compatibility out of the box via a Solidity to Cairo compiler, however, native Cairo code will be more performant. StarkNet will also feature a range of data-availability solutions, meaning that users will be able to switch between a zk-rollup and a validium on a per transaction basis (more on this in the validium/volition section).
@@ -312,13 +316,13 @@ There are additional features that will be rolled out as part of the Alpha 1 and
 - Equilibrium is working on a StarkNet Full Node implementation in Rust,
 - Cairo audit services: In the coming months, ABDK, ConsenSys Diligence, Peckshield, and Trail of Bits will be conducting Cairo audit
 
-- #### **Polygon Hermez**
+- ### **Polygon Hermez**
 
 Polygon Hermez is a permissionless decentralized ZK-rollup living on Ethereum. The Hermez zk-L2 and its team [were acquired by and merged into the Polygon ecosystem](https://blog.hermez.io/polygon-hermez-merge/). Polygon has a PoS data availability layer, a plasma chain, and is also developing scaling solutions that utilize optimistic rollups, and various others.
 
 The Polygon Hermez team also announced their plans for full EVM-support (zkEVM) in a [Medium blog post](https://blog.hermez.io/introducing-hermez-zkevm/). They expect to launch a testnet by the end of Q4 2021, with a mainnet launch somewhere in Q2 2022.
 
-![clipboard.png](./images/hermez-roadmap.png)
+![clipboard.png](/assets/articles/hermez-roadmap.png)
 
 The Polygon Hermez protocol uses a very similar dynamic to the other zk-rollups mentioned above. It has an off-chain prover that validates transactions and generates a SNARK proof which gets submitted to the on-chain verifier; If the proof is valid, the new state gets committed and settled on Ethereum mainnet. For more details on the Polygon Hermez infrastructure, you can visit [the documentation](https://docs.hermez.io/#/developers/protocol/hermez-protocol/protocol).
 
@@ -326,7 +330,7 @@ The Hermez team also has a [whitepaper](https://hermez.io/hermez-whitepaper.pdf)
 
 Currently, Polygon Hermez can be used by anyone, however, it is not EVM-compatible. It is mostly used as a payments platform within a zk-rollup environment. To use Polygon Hermez, connect to their [web wallet UI](https://wallet.hermez.io/login) using MetaMask or WalletConnect and deposit funds into their L2, on top of which you can freely transact with other users for a [fraction of the cost](https://l2fees.info) of Ethereum mainnet.
 
-- #### **Aztec Network**
+- ### **Aztec Network**
 
 Aztec Network is a privacy-focused ZK-rollup L2 on Ethereum. The Aztec Network L2 allows for fast, cheap, DeFi compatible transactions in a completely private fashion without compromising Ethereum security and decentralization. Aztec is built on [PLONK](https://vitalik.ca/general/2019/09/22/plonk.html) which is a universal standard for SNARK technology developed by them. Aztec 2.0 is the current iteration of the protocol and improved on various shortcomings of v1.
 
@@ -349,7 +353,7 @@ As a user you can:
 
 The Aztec team built a private wallet application called [zk.money](https://zk.money)y, users can deposit funds onto the Aztec 2.0 zk-rollup, 'shield their assets', and transact on the network.
 
-- #### **Loopring**
+- ### **Loopring**
 
 [Loopring](https://loopring.org/#/) protocol is an open-source zkRollup protocol. It is a collection of Ethereum smart contracts and ZK circuits which describe how to build highly-secure, highly-scalable orderbook-based DEXes, AMMs, and payment apps.
 
@@ -386,9 +390,7 @@ The Loopring protocol works in a very similar way to other zk-rollups mentioned 
 - **[Loopring 3.8 design documentation](https://github.com/Loopring/protocols/blob/master/packages/loopring_v3/DESIGN.md)**
 - **[Loopring Protocol v3 Code](https://github.com/Loopring/protocols/tree/release_loopring_3.6.2/packages/loopring_v3)**
 
-<a id="validium"></a>
-
-#### **Validium/Volition (offchain calldata)**
+## **Validium/Volition (offchain calldata)**
 
 In this section, we'll discuss a hybrid approach to scaling, one that doesn't put calldata on-chain and instead takes some compromises in security in order to increase scalability. This approach is no longer considered a 'true L2' where the definition is a scaling network that inherits the same security guarantees of the network it is built on top of.
 
@@ -402,7 +404,7 @@ For a more in-depth comparison of zk-rollups and validium, read [zkSync's compar
 
 Volition is an architecture ([pioneered by Starkware](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)) that an L2 can adopt where the user can choose whether to use a validium or a zk-rollup on the L2 on a per transaction basis. This would allow the user to specify whether he wants to maximize decentralization and security or scalability within the same L2; this architecture is getting a lot of traction and is set to be an integral design decision for the Starknet and zkSync 2.0 L2s as well as other validity proof based solutions in the future.
 
-- #### **Starkware**
+- **Starkware**
 
 Starkware has partnered with various projects to build a use case tailored validium running the StarkEx engine in order to provide massive scalability. For the projects looking for true L2 security guarantees, a volition model using the StarkEx engine is adopted.
 
@@ -420,7 +422,7 @@ To start building on ImmutableX, [contact them](https://www.immutable.com/contac
 
 [DeversiFi](https://www.deversifi.com) is a decentralized cryptocurrency exchange that runs on a custom StarkEx Validium L2.
 
-- #### **zkPorter**
+- **zkPorter**
 
 [zkPorter](https://medium.com/matter-labs/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf) is zkSync's validium implementation which will be running side by side with zkSync 2.0 in a volition design. From the [zkEVM FAQ](https://zksync.io/zkevm/#what-is-zkporter):
 
@@ -462,11 +464,9 @@ But the point that we need to work most on, is the education of users. I've seen
 
 As I mentioned above, there are many valid concerns about fragmented liquidity across the Ethereum ecosystem as liquidity is not shared across L2s. In this section, I'll cover a few of the projects and liquidity models which are planning to tackle this very issue.
 
-<a id="hop"></a>
-
 ### Hop protocol
 
-"[Hop](https://hop.exchange)is a scalable rollup-to-rollup (also supports Polygon PoS and xDai) general non-custodial token bridge. It allows users to send tokens from one rollup or sidechain to another almost immediately without having to wait for the network's challenge period."
+"[Hop](https://hop.exchange) is a scalable rollup-to-rollup (also supports Polygon PoS and xDai) general non-custodial token bridge. It allows users to send tokens from one rollup or sidechain to another almost immediately without having to wait for the network's challenge period."
 
 "It works by involving market makers (referred to as Bonder) who front the liquidity at the destination chain in exchange for a small fee."
 
@@ -476,11 +476,11 @@ As I mentioned above, there are many valid concerns about fragmented liquidity a
 
 The Hop team also provides an [SDK](https://docs.hop.exchange/js-sdk/getting-started) which enables developers to integrate Hop functionality into their decentralized applications.
 
-- **Source:** [Hop FAQ](https://help.hop.exchange/hc/en-us/articles/4405172445197-What-is-Hop-Protocol-)
+**Source**
 
-- **[Code](https://github.com/hop-protocol)**
+- [Hop FAQ](https://help.hop.exchange/hc/en-us/articles/4405172445197-What-is-Hop-Protocol-)
 
-<a id="connext"></a>
+- [Code](https://github.com/hop-protocol)
 
 ### Connext
 
@@ -492,8 +492,9 @@ They created [NXTP](https://github.com/connext/nxtp) which is a lightweight prot
 
 The Connext protocol can be accessed through the [xPollinate](https://xpollinate.io/) UI.
 
-- **[Code](https://github.com/connext/nxtp)**
-- **[Documentation](https://docs.connext.network)**
+**Source**
+- [Code](https://github.com/connext/nxtp)
+- [Documentation](https://docs.connext.network)
 
 ### Synapse protocol
 
@@ -501,14 +502,16 @@ The Connext protocol can be accessed through the [xPollinate](https://xpollinate
 
 "The Synapse network is secured by cross-chain multi-party computation (MPC) validators operating with threshold signature schemes (TSS). The network is leaderless and maintains security by each validator running the same process upon receiving on-chain events on the various chains that the MPC validator group tracks. Once two-thirds of all validators have collectively signed the same transaction using their own individual key, the network achieves consensus and issues a transaction to the destination chain."
 
-- **[Source: Documentation](https://docs.synapseprotocol.com)**
+**Source**
+- [Documentation](https://docs.synapseprotocol.com)
 
 ### Celer cBridge
 
 "[Celer cBridge](https://cbridge.celer.network/#/transfer) is a multi-chain network that enables instant, low-cost, and ANY-to-ANY value transfers within and across different layer-1 blockchains, such as Ethereum and Polkadot, and different layer-2 scaling solutions on top, such as Optimistic Rollup, ZK Rollup, and sidechains."
 
-- **[Source: Documentation](https://cbridge-docs.celer.network/#/FAQ)**
-- **[Code](https://github.com/celer-network/)**
+**Source**
+- [Documentation](https://cbridge-docs.celer.network/#/FAQ)
+- [Code](https://github.com/celer-network/)
 
 ### deBridge
 
@@ -516,15 +519,14 @@ The Connext protocol can be accessed through the [xPollinate](https://xpollinate
 
 "The protocol enables transfers of assets between various blockchains via locking/unlocking of the asset on the native chain and issuing/burning the wrapped asset (deAsset) on secondary chains or L2s. Cross-chain communication between different blockchains is maintained by elected validators who run the deBridge node to perform validation of cross-chain transactions that pass between smart contracts of the deBridge protocol in different blockchains."
 
-- **[Source: Documentation](https://docs.debridge.finance)**
-- **[Code](https://github.com/debridge-finance/)**
-
-<a id="damm"></a>
+**Source**
+- [Documentation](https://docs.debridge.finance)
+- [Code](https://github.com/debridge-finance/)
 
 ### dAMM
 
 [dAMM](https://medium.com/loopring-protocol/damm-distributed-amm-98dcfa2b26dd)is a cross-L2 AMM design developed jointly by Loopring and Starkware.
-![clipboard.png](./images/damm.png)
+![clipboard.png](/assets/articles/dAMM.png)
 **dAMM** enables:
 
 - ZK-based L2s (e.g., DeversiFi, Loopring …) to asynchronously share liquidity — exposing LPs to more trades
@@ -539,11 +541,9 @@ The Connext protocol can be accessed through the [xPollinate](https://xpollinate
 
 Tokemak [announced](https://medium.com/tokemak/leaky-thoughts-with-s-d3f3e3ace7c) that they plan to target the liquidity fragmentation problem by creating a deep liquidity pool that could route liquidity to pools from cross-L2 bridges like Hop to solve current liquidity fragmentation issues.
 
-#### Summary
+## Summary
 
 Liquidity fragmentation across L2s is a problem that is already being addressed in various ways and by various different players. My personal speculation is that a model that contains a mix of the dAMM + Hop/Connext + Tokemak designs will emerge in order to abstract L2 liquidity fragmentation away in a form that will make it seem like it's completely unified.
-
-<a id="resources"></a>
 
 ## Useful resources
 
@@ -561,15 +561,15 @@ These are tools I use on a daily basis to gauge the state of adoption of Ethereu
 #### L2BEAT
 
 L2BEAT is the leading dashboard for looking at how much TVL is in Ethereum L2s.
-![clipboard.png](./images/l2beat1.png)
-![clipboard.png](./images/l2beat2.png)
+![clipboard.png](/assets/articles/l2beat1.png)
+![clipboard.png](/assets/articles/l2beat2.png)
 One of the great features of L2beat is that they also feature the type of scaling technology used within the L2 and the purpose it is currently serving. They also have a good [FAQ page](https://l2beat.com/faq/) that I often reference for beginners just
 learning about L2s.
 
 #### L2fees
 
 [L2Fees](https://l2fees.info/) is one of many great dashboards built by [David Mihal](https://twitter.com/dmihal), it shows how cheap it is to perform different actions on certain L2s compared to Ethereum mainnet.
-![clipboard.png](./images/l2fees.png)
+![clipboard.png](/assets/articles/l2fees.png)
 
 #### Cryptofees
 
@@ -633,6 +633,7 @@ My goal with this article is for it to become a timeless ever-updating resource 
 #### Contributing
 
 If you liked this article consider donating so that I can keep producing more public educational content. Address: dcbuilder.eth (any Ethereum L2 / sidechain / data availability layer). Also consider donating or contributing to the teams building out the scaling infrastructure of Ethereum and also the people that help educate and grow the community either through [Gitcoin grants](https://gitcoin.co/grants/), developer bounties, DAO grants, or other forms of support.
+
 
 #### Thank you
 
