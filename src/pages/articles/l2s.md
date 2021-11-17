@@ -525,7 +525,7 @@ The Connext protocol can be accessed through the [xPollinate](https://xpollinate
 
 ### dAMM
 
-[dAMM](https://medium.com/loopring-protocol/damm-distributed-amm-98dcfa2b26dd)is a cross-L2 AMM design developed jointly by Loopring and Starkware.
+[dAMM](https://medium.com/loopring-protocol/damm-distributed-amm-98dcfa2b26dd) is a cross-L2 AMM design developed jointly by Loopring and Starkware.
 ![clipboard.png](/assets/articles/dAMM.png)
 **dAMM** enables:
 
