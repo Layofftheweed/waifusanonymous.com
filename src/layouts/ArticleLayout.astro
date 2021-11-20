@@ -47,5 +47,13 @@ const { title, author, authorLink, date } = content;
         </article>
       <Footer />
     </div>
+    <script>
+      document
+        .querySelectorAll('.article a:not(.article--back-link)')
+        .forEach(el => {
+          el.target = '_blank';
+          el.rel = 'noopener noreferrer';
+        });
+    </script>
   </body>
 </html>
