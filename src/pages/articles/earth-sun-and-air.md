@@ -14,7 +14,7 @@ Written by [0xPuffin](https://twitter.com/0xPuffin), Edited by [Pinkbones](https
 
 ----
 
-There's recently been a lot of activity around bringing dao ownership styles into the IRL real estate game. Three of the big ones I've seen are [cityDAO](https://twitter.com/CityDao), [Praxis Society](https://twitter.com/PraxisSociety), and [Kong Land](https://kong.land/). Each one is taking a different approach to find a place in the existing legal structures of the world.
+There's recently been a lot of activity around bringing DAO ownership styles into the IRL real estate game. Three of the big ones I've seen are [cityDAO](https://twitter.com/CityDao), [Praxis Society](https://twitter.com/PraxisSociety), and [Kong Land](https://kong.land/). Each one is taking a different approach to find a place in the existing legal structures of the world.
 
 ### CityDAO 💨
 ![](https://i.imgur.com/HtIxp7n.png)
@@ -44,11 +44,12 @@ Currently  you can buy their [$CITIZEN](https://www.dextools.io/app/ether/pair-e
 They also have KongCash (pictured above), which is a physical, flexible pcb board that you can redeem for ETH after a certain date. In effect, it operates like a traditional currency on the gold or silver standard, but its ETH backed instead.
 
 ___
-There's more and more of these schemes popping up like [Prospera](https://en.wikipedia.org/wiki/Pr%C3%B3spera) in Honduras (another Silicon Valley funded SEZ style one but they dont have anything like a token yet afaik) and the state of Nevada, USA which recently declared that [companies can buy up land and form their own county level government](https://www.bbc.com/news/world-us-canada-56409924).
 
-The main framework underlying all of these to varying degrees, seems to be ```pay a existing sovereign to borrow some of their legitimacy```. This concept was outlined 20+ years ago in [_The Sovereign Individual_](https://www.lopp.net/pdf/The%20Sovereign%20Individual.pdf). 
+There are more and more of these schemes popping up like [Prospera](https://en.wikipedia.org/wiki/Pr%C3%B3spera) in Honduras (another Silicon Valley funded SEZ style one but they dont have anything like a token yet afaik) and the state of Nevada, USA which recently declared that [companies can buy up land and form their own county level government](https://www.bbc.com/news/world-us-canada-56409924).
 
-I've applied to basically all of these in some various capacities and believe that at the very least anyone who has made money this bullrun should try and hedge into at least one or buy a second citizenship in a existing state if you dont have a few already (read _The Soverign Individual_ if you dont understand why this is important). If not already occupied by other projects this is what i would be working on. Decentralizing finance is a  great place to start but the future seems much darker until sovereign power, production capacity, and humanity itself are decentralized.
+The main framework underlying all of these to varying degrees seems to be, __pay an existing sovereign to borrow some of their legitimacy__. This concept was outlined 20+ years ago in [_The Sovereign Individual_](https://www.lopp.net/pdf/The%20Sovereign%20Individual.pdf). 
+
+I've applied to basically all of these in some various capacities and believe that, at the very least, anyone who has made money this bullrun should try and hedge into at least one or buy a second citizenship in an existing state if you dont have a few already (read _The Soverign Individual_ if you dont understand why this is important). If not already occupied by other projects this is what I would be working on. Decentralizing finance is a great place to start, but the future seems much darker until sovereign power, production capacity, and humanity itself are decentralized.
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Spacecolony3edit.jpeg/1920px-Spacecolony3edit.jpeg)
 
-This article was named to represent the main styles of vibes these places have so far and the one that's missing, water. I wonder  how long it will be until we see a dao pick up the [seasteading](https://www.freedomhaven.org/) flag or later even spacesteading. Awareness of the potental in sovereign states is [growing](https://twitter.com/scupytrooples/status/1461595190393593859?s=20). I hope to see one in the vein of [Kowloon](https://en.wikipedia.org/wiki/Kowloon_Walled_City) in the 1950-90s or [Tortuga](https://en.wikipedia.org/wiki/Tortuga_(Haiti)#History) in the 1640s.
+This article was named to represent the main styles of vibes these places have so far and the one that's missing, water. I wonder  how long it will be until we see a DAO pick up the [seasteading](https://www.freedomhaven.org/) flag or later even spacesteading. Awareness of the potental in sovereign states is [growing](https://twitter.com/scupytrooples/status/1461595190393593859?s=20). I hope to see one in the vein of [Kowloon](https://en.wikipedia.org/wiki/Kowloon_Walled_City) in the 1950-90s or [Tortuga](https://en.wikipedia.org/wiki/Tortuga_(Haiti)#History) in the 1640s.
