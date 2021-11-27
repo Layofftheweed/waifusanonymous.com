@@ -1,0 +1,38 @@
+.player {
+  animation: 5s shake linear infinite alternate;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 0.5rem;
+  margin: 2rem auto;
+  max-width: 20rem;
+
+  &--img-container {
+    background-color: var(--color-black);
+    height: 350px;
+    display: flex;
+    width: 100%;
+  }
+
+  &--img {
+    display: block;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &--audio-container {
+    margin-top: 1rem;
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: rotate(5deg);
+  }
+
+  to {
+    transform: rotate(-5deg);
+  }
+}

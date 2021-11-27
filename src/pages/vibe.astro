@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SongPlayer from '../components/SongPlayer/SongPlayer.tsx';
+import waRadio from '../data/wa-radio.json';
+---
+
+<style lang="scss">
+  .container {
+    padding: 1rem;
+  }
+
+  header {
+    text-align: center;
+
+    h1 {
+      margin-top: 2rem;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+  }
+</style>
+
+<BaseLayout title="waifus anonymous | vibe zone">
+  <main class="container">
+    <header>
+      <h1>vibe</h1>
+      <p>
+        brought to you by <a href="https://twitter.com/layofftheweed" target="_blank" rel="noopener noreferrer">48</a>
+      </p>
+    </header>
+    <SongPlayer first={waRadio.first} songs={waRadio.songs} gifs={waRadio.gifs} client:only="react" />
+  </main>
+</BaseLayout>
