@@ -54,13 +54,19 @@ export default function SongPlayer({ first, songs, gifs }: Props) {
   React.useEffect(() => {
     if (audioRef.current !== null) {
       audioRef.current.addEventListener('ended', () => {
-        setCurrentSong(getRandomIndex(songs));
+        let nextSong = getRandomIndex(songs);
+        if (nextSong === first) {
+          nextSong = getRandomIndex(songs);
+        }
+        setCurrentSong(nextSong);
         audioRef.current.load();
+        audioRef.current.play();
       });
 
       audioRef.current.addEventListener('stalled', () => {
         setCurrentSong(getRandomIndex(songs));
         audioRef.current.load();
+        audioRef.current.play();
       });
 
       audioRef.current.addEventListener('pause', () => setPlaying(false));
