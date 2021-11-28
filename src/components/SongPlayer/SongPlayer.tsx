@@ -88,24 +88,16 @@ export default function SongPlayer({ first, songs, gifs }: Props) {
 
     const playListener = () => setPlaying(true);
 
-    const loadStartListener = () => setLoading(true);
-
-    const loadedDataListener = () => setLoading(false);
-
     audioRef.current.addEventListener('ended', endedListener);
     audioRef.current.addEventListener('stalled', stalledListener);
     audioRef.current.addEventListener('pause', pauseListener);
     audioRef.current.addEventListener('play', playListener);
-    audioRef.current.addEventListener('loadstart', loadStartListener);
-    audioRef.current.addEventListener('loadeddata', loadedDataListener);
 
     return () => {
       audioRef.current.removeEventListener('ended', endedListener);
       audioRef.current.removeEventListener('stalled', stalledListener);
       audioRef.current.removeEventListener('pause', pauseListener);
       audioRef.current.removeEventListener('play', playListener);
-      audioRef.current.removeEventListener('loadstart', loadStartListener);
-      audioRef.current.removeEventListener('loadeddata', loadedDataListener);
     };
   }, [audioRef, setCurrentSong, getRandomIndex, songs]);
 
@@ -150,7 +142,7 @@ export default function SongPlayer({ first, songs, gifs }: Props) {
             />
           </div>
           <div className={styles['player--controls']}>
-            <button type="button" disabled={!lastSong || isLoading} onClick={() => lastTrack()}>
+            <button type="button" disabled={!lastSong} onClick={() => lastTrack()}>
               <FontAwesomeIcon icon={faBackward} />
             </button>
             <button
@@ -158,11 +150,10 @@ export default function SongPlayer({ first, songs, gifs }: Props) {
               onClick={() =>
                 audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause()
               }
-              disabled={isLoading}
             >
               {isPlaying ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
             </button>
-            <button type="button" onClick={() => nextTrack()} disabled={isLoading}>
+            <button type="button" onClick={() => nextTrack()}>
               <FontAwesomeIcon icon={faForward} />
             </button>
           </div>
