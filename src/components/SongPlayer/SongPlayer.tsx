@@ -127,11 +127,8 @@ export default function SongPlayer({ first, songs, gifs }: Props) {
     <div className={styles['player']}>
       <div className={styles['player--img-container']}>
         {currentGif !== null ? (
-          <div className={styles['player--spinner']}>
-            <img src={`/assets/gifs/${currentGif}`} alt="" className={styles['player--img']} />
-          </div>
+          <img src={`/assets/gifs/${currentGif}`} alt="" className={styles['player--img']} />
         ) : null}
-        <img src="/assets/waifusanonymous.png" alt="" className={styles['player--logo']} />
       </div>
       <div className={styles['player--audio-container']}>
         <audio ref={audioRef}>
