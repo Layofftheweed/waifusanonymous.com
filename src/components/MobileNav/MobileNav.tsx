@@ -25,6 +25,9 @@ export default function MobileNav() {
             <li>
               <a href="/contact">contact</a>
             </li>
+            <li>
+              <a href="/vibe">vibe</a>
+            </li>
           </ul>
         </nav>
 
